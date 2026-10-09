@@ -2,7 +2,8 @@
 scheme: "Green DiSC"
 track: "RG"
 source: "https://github.com/Cambridge-Sustainable-Computing-Lab/greenDiSC"
-source_commit: "c45acaf7916a9ccdbd809bdf9199b06bc783b140"
+# Upstream commit that last changed this track's criteria (not necessarily upstream's latest).
+source_commit: "ba489984e043b5150bb2030bc1c2bc80c2d20f86"
 last_verified: "2026-10-09"
 tiers:
   - name: "Bronze"
