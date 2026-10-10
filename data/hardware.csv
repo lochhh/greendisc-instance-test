@@ -1,0 +1,3 @@
+record,type,model,supplier,purchased,warranty,status,action,location,asset_tag
+4,laptop,Sample laptop,Sample supplier,2023,3 years,in use,unknown,unknown,unknown
+4,monitor,Sample monitor,unknown,2019,unknown,unused,donate,unknown,unknown
