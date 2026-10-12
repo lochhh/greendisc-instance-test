@@ -2,4 +2,4 @@ record,type,model,supplier,purchased,warranty,status,action,location,asset_tag
 4,laptop,Sample laptop,Sample supplier,2023,3 years,disposed,returned to IT,unknown,unknown
 4,monitor,Sample monitor,unknown,2019,unknown,unused,donate,unknown,unknown
 4,keyboard,Sample keyboard,unknown,2022,unknown,in use,unknown,unknown,unknown
-4,phone,Sample phone,unknown,2024,unknown,in use,unknown,unknown,unknown
+4,phone,Sample phone,Google,2024,unknown,in use,unknown,unknown,unknown
