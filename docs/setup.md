@@ -35,7 +35,7 @@ Edit [`config.yml`](../config.yml) and set `track`:
 | `CT` | Central Team |
 | `RCI` | Research Computing Infrastructure |
 
-Committing the change starts the criteria sync, which opens a pull request creating `criteria.yml`; merge it. Keeping the default `RG`? Run **Actions → Sync Green DiSC criteria → Run workflow** once instead. See [Keeping criteria in sync](criteria-sync.md).
+Committing the change starts the criteria sync, which opens a pull request creating `criteria.yml`; merge it. If you're keeping the default `RG`, run **Actions → Sync Green DiSC criteria → Run workflow** once instead. See [Keeping criteria in sync](criteria-sync.md) for details on how the sync works.
 
 ## 5. Add people
 
