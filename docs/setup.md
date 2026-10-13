@@ -53,3 +53,12 @@ A repository owned by a personal account has no Maintain role: every collaborato
 ## 6. Create records
 
 Ask each member to create their record: **Issues → New issue → My Green DiSC record**, then comment `/save`. See [Recording evidence](records.md).
+
+## What the workflows can do
+
+For whoever approves the repository. Each workflow asks only for these permissions, using the default `GITHUB_TOKEN`; no secrets or apps are involved.
+
+| Workflow | Permissions | Why |
+|---|---|---|
+| Save Green DiSC records (`save-record.yml`) | `contents: write`, `issues: write` | Commit `data/*.csv`; label and comment on records, close duplicates |
+| Sync Green DiSC criteria (`sync-criteria.yml`) | `contents: write`, `pull-requests: write` | Push the `greendisc/sync-criteria` branch; open its pull request |
