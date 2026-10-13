@@ -1,2 +1,2 @@
-record,name,runs_on,runtime,resources,runs,status
-4,Sample sorter,hpc,3 h,4 GPUs,weekly,active
+record,name,runs_on,runtime,resources,runs,status,notes
+4,Sample sorter,hpc,3 h,4 GPUs,weekly,active,
