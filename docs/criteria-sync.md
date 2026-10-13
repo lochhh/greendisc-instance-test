@@ -18,7 +18,7 @@ If upstream changes its file format, the workflow fails instead of writing a wro
 
 ## Running it
 
-Run it from the **Actions** tab → *Sync Green DiSC criteria* → *Run workflow*. Run it once after creating your repository from the template, to create `criteria.yml`.
+It runs automatically whenever a change to `config.yml` reaches `main`, so changing `track` or `criteria_ref` keeps `criteria.yml` in step. You can also run it from the **Actions** tab → *Sync Green DiSC criteria* → *Run workflow*.
 
 ## Settings
 
