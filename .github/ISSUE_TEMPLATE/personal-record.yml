@@ -20,10 +20,11 @@ body:
         Status: in use, unused or disposed
         Action: for unused or disposed items, what was or will be done (repurpose, donate, recycle, ...)
         Location, Asset tag: optional. Leave blank if this repository is or could become public.
+        Notes: optional, anything that helps (e.g. shared with a colleague, waiting for IT)
         -->
-        | Type | Model | Supplier | Purchased | Warranty | Status | Action | Location | Asset tag |
-        |------|-------|----------|-----------|----------|--------|--------|----------|-----------|
-        |      |       |          |           |          |        |        |          |           |
+        | Type | Model | Supplier | Purchased | Warranty | Status | Action | Location | Asset tag | Notes |
+        |------|-------|----------|-----------|----------|--------|--------|----------|-----------|-------|
+        |      |       |          |           |          |        |        |          |           |       |
   - type: textarea
     id: data-resources
     attributes:
@@ -37,10 +38,11 @@ body:
         Size: e.g. 500 GB, ~3 TB
         If lost: easy to replace, hard to replace or irreplaceable
         Status: in use, archived or deleted
+        Notes: optional, anything that helps (e.g. shared with a colleague, waiting for IT)
         -->
-        | Name | Hosted by | Location | Size | If lost | Status |
-        |------|-----------|----------|------|---------|--------|
-        |      |           |          |      |         |        |
+        | Name | Hosted by | Location | Size | If lost | Status | Notes |
+        |------|-----------|----------|------|---------|--------|-------|
+        |      |           |          |      |         |        |       |
   - type: textarea
     id: data-cleaning
     attributes:
@@ -52,10 +54,11 @@ body:
         Scope: what you went through, e.g. my scratch space on the cluster
         Freed: storage freed, e.g. 40 GB, ~1 TB
         Next: when you plan the next cleanup, as YYYY-MM-DD
+        Notes: optional, anything that helps (e.g. shared with a colleague, waiting for IT)
         -->
-        | Date | Scope | Freed | Next |
-        |------|-------|-------|------|
-        |      |       |       |      |
+        | Date | Scope | Freed | Next | Notes |
+        |------|-------|-------|------|-------|
+        |      |       |       |      |       |
   - type: textarea
     id: pipelines
     attributes:
@@ -69,7 +72,8 @@ body:
         Resources: per run, e.g. 4 GPUs, 64 GB RAM
         Runs: how often, e.g. weekly, ~200 a year
         Status: active or retired
+        Notes: optional, anything that helps (e.g. shared with a colleague, waiting for IT)
         -->
-        | Name | Runs on | Runtime | Resources | Runs | Status |
-        |------|---------|---------|-----------|------|--------|
-        |      |         |         |           |      |        |
+        | Name | Runs on | Runtime | Resources | Runs | Status | Notes |
+        |------|---------|---------|-----------|------|--------|-------|
+        |      |         |         |           |      |        |       |
