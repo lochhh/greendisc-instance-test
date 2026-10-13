@@ -70,10 +70,10 @@ body:
         Runs on: e.g. the cluster's name, cloud, laptop
         Runtime: per run, e.g. 3 h, 2 days
         Resources: per run, e.g. 4 GPUs, 64 GB RAM
-        Runs: how often, e.g. weekly, ~200 a year
+        Frequency: how often it runs, e.g. weekly, ~200 a year
         Status: active or retired
         Notes: optional, anything that helps (e.g. shared with a colleague, waiting for IT)
         -->
-        | Name | Runs on | Runtime | Resources | Runs | Status | Notes |
-        |------|---------|---------|-----------|------|--------|-------|
-        |      |         |         |           |      |        |       |
+        | Name | Runs on | Runtime | Resources | Frequency | Status | Notes |
+        |------|---------|---------|-----------|-----------|--------|-------|
+        |      |         |         |           |           |        |       |
