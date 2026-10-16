@@ -1,0 +1,3 @@
+record,name,hosted_by,location,size,if_lost,status,notes
+8,Sample scans,us,unknown,~2 TB,hard to replace,in use,
+8,Public atlas,external,unknown,30 GB,easy to replace,in use,

@@ -1,0 +1,5 @@
+record,type,model,supplier,purchased,warranty,status,action,location,asset_tag,notes
+8,laptop,Sample laptop,Sample supplier,2023,3 years,disposed,returned to IT,unknown,unknown,
+8,monitor,Sample monitor,unknown,2019,unknown,unused,donate,unknown,unknown,
+8,keyboard,Sample keyboard,unknown,2022,unknown,in use,unknown,unknown,unknown,
+8,phone,Sample phone,Google,2024,unknown,in use,unknown,unknown,unknown,
