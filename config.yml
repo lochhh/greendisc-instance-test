@@ -7,3 +7,13 @@ track: RG
 # Upstream Green DiSC branch, tag or commit SHA to sync criteria from.
 # Leave on main to follow upstream; set a SHA to pin.
 criteria_ref: main
+
+# Your Green DiSC representative. Named in review check-ins and bot replies,
+# and evidence for criterion G1-B. Required before starting a review.
+representative:
+  name: "Sample Rep"
+  github: "lochhh"
+  contact: "rep@example.org"
+
+# Tiers to open review issues for, as named in criteria.yml.
+tiers: [Bronze]

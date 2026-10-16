@@ -1,0 +1,40 @@
+name: Start Green DiSC review
+
+# Starts a review cycle: a milestone due on the review date, one issue per
+# criterion, and a check-in for each record owner. Closes the previous cycle,
+# then syncs the criteria. Only maintainers and admins can start a review.
+on:
+  workflow_dispatch:
+    inputs:
+      due:
+        description: Review meeting date (YYYY-MM-DD)
+        required: true
+        type: string
+      name:
+        description: Cycle name (leave blank for "Review <year>-<month>")
+        required: false
+        type: string
+
+permissions: {}
+
+jobs:
+  review:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read # read config.yml and criteria.yml
+      issues: write # milestones, labels, criterion issues and check-ins
+    steps:
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+
+      - uses: lochhh/actions/greendisc_toolkit/review_cycle@66c198ee0ba226fc309fefa1ed4b95ac21367a20 # greendisc-toolkit branch (untagged)
+        with:
+          due: ${{ inputs.due }}
+          name: ${{ inputs.name }}
+
+  # Propose any upstream criteria changes as a pull request for this review.
+  sync:
+    needs: review
+    uses: ./.github/workflows/sync-criteria.yml
+    permissions:
+      contents: write
+      pull-requests: write

@@ -25,9 +25,13 @@ If the policy allows all actions, there is nothing to do. The same setting exist
 - **Workflow permissions:** leave the default (read). Each workflow asks for the permissions it needs.
 - Tick **Allow GitHub Actions to create and approve pull requests**, so the criteria sync can open its pull request. If it is greyed out, your organisation has disabled it; ask an organisation owner.
 
-## 4. Choose your track and sync the criteria
+## 4. Fill in `config.yml` and sync the criteria
 
-Edit [`config.yml`](../config.yml) and set `track`:
+Edit [`config.yml`](../config.yml):
+
+- **`representative`**: your Green DiSC representative's `name`, GitHub username (`github`) and `contact` (e.g. an email address). Members see these in their review check-ins and in the bot's replies, and they are evidence for `G1-B`. Reviews can't start until they're filled in. When the representative changes, update them here.
+- **`tiers`**: which tiers' criteria to review; leave it as `[Bronze]` to start with.
+- **`track`**:
 
 | `track` | Green DiSC track |
 |---|---|
@@ -35,7 +39,7 @@ Edit [`config.yml`](../config.yml) and set `track`:
 | `CT` | Central Team |
 | `RCI` | Research Computing Infrastructure |
 
-Committing the change starts the criteria sync, which opens a pull request creating `criteria.yml`; merge it. If you're keeping the default `RG`, run **Actions → Sync Green DiSC criteria → Run workflow** once instead. See [Keeping criteria in sync](criteria-sync.md) for details on how the sync works.
+Committing a change to `config.yml` starts the criteria sync, which opens a pull request creating `criteria.yml`; merge it. If you're keeping the default `RG`, run **Actions → Sync Green DiSC criteria → Run workflow** once instead. See [Keeping criteria in sync](criteria-sync.md) for details on how the sync works.
 
 ## 5. Add people
 
@@ -44,7 +48,7 @@ Committing the change starts the criteria sync, which opens a pull request creat
 | Who | Role | Why |
 |---|---|---|
 | Members | **Write** | Create and save their own record, and add rows to the group record |
-| Green DiSC representative | **Maintain** | Save the group record, and anyone's record, e.g. to update the record of someone who has left |
+| Green DiSC representative | **Maintain** | Start reviews; save the group record, and anyone's record, e.g. to update the record of someone who has left |
 
 People with the **Read** role can see the records but can't save them. See [Who can save](records.md#who-can-save).
 
@@ -54,6 +58,10 @@ A repository owned by a personal account has no Maintain role: every collaborato
 
 The representative creates the group record once (**Issues → New issue → Green DiSC group record**), and asks each member to create their own (**My Green DiSC record**). Each record is saved by commenting `/save` on it. See [Recording evidence](records.md).
 
+## 7. Start your first review
+
+The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the review's milestone, one issue per criterion and a check-in for each member. See [Running reviews](reviews.md).
+
 ## What the workflows can do
 
 For whoever approves the repository. Each workflow asks only for these permissions, using the default `GITHUB_TOKEN`; no secrets or apps are involved.
@@ -62,3 +70,4 @@ For whoever approves the repository. Each workflow asks only for these permissio
 |---|---|---|
 | Save Green DiSC records (`save-record.yml`) | `contents: write`, `issues: write` | Commit `data/*.csv`; label and comment on records, close duplicates |
 | Sync Green DiSC criteria (`sync-criteria.yml`) | `contents: write`, `pull-requests: write` | Push the `greendisc/sync-criteria` branch; open its pull request |
+| Start Green DiSC review (`review.yml`) | `contents: read`, `issues: write`; then the criteria sync's permissions | Read `config.yml` and `criteria.yml`; create the milestone, criterion issues and check-ins, close the previous cycle |

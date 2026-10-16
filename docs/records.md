@@ -38,6 +38,8 @@ Edit your record issue, change the table and comment `/save` again. Your saved r
 
 Editing the table adds the `unsaved changes` label, and a successful `/save` removes it. Until then your edits are not in the saved data, so the review can find unsaved records with the issue search `is:issue label:"unsaved changes"`.
 
+Before each review you'll get a **check-in** issue asking you to go over your record. Saving your record ticks it off; see [Running reviews](reviews.md).
+
 - **New item:** add a row.
 - **Item no longer used:** set its status to `unused` and say in **Action** what will happen to it.
 - **Item gone:** set its status to `disposed` and say in **Action** what happened (returned, donated, recycled, …). Keep the row: Green DiSC asks what happened to equipment.
