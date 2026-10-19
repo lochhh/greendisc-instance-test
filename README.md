@@ -28,10 +28,11 @@ A GitHub template that helps research groups and teams gather, organise and revi
 
 **The Green DiSC representative** (Maintain role):
 
-- Sets up the repository and keeps the section above up to date.
+- Sets up the repository and keeps the *Your Green DiSC representative* section up to date.
 - Reviews what members add to the group record, and saves it.
 - Starts each review with the meeting date, and runs the meeting.
-- Keeps the [guides](guides/README.md) up to date, reviewing members' suggestions, and updates the records of people who leave.
+- Keeps the [guides](guides/README.md) up to date, reviewing members' suggestions.
+- Manages who's in the group: gives new members Write access (the next review creates their record), and when someone leaves, updates and closes their record, then removes their access.
 
 ## Where the evidence lives
 
