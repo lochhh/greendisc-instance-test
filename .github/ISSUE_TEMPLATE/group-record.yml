@@ -15,7 +15,7 @@ body:
       value: |
         - Anyone in the group can add to this record: add a row per system, session or activity.
         - Keep earlier rows: together they are the history Green DiSC asks for.
-        - Leave a cell blank if you don't know.
+        - Leave a cell blank if you don't know, and write `n/a` if it doesn't apply.
         - When you've added your rows, click **Save** on the issue. It's then marked `unsaved changes` for the Green DiSC representative to review.
         - Do not close this issue: it's the group's ongoing record, updated before each review.
 

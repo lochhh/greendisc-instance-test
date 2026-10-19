@@ -24,9 +24,9 @@ Leave a table empty if it doesn't apply. Reference material, such as e-waste rou
 ## Creating your record
 
 1. **Issues → New issue → My Green DiSC record.**
-2. Fill in the table: one row per item, copying a row to add more. The **How to update this record** section at the top explains the basics, and the comment above each table (visible when editing) says what each column expects. **Type** is free text; use the suggested names where they fit so items are counted together. Leave a cell blank if you don't know; it is saved as `unknown` so it can be filled in later. Every table also has an optional **Notes** column, which can stay blank.
+2. Fill in the table: one row per item, copying a row to add more. The **How to update this record** section at the top explains the basics, and the comment above each table (visible when editing) says what each column expects. **Type** is free text; use the suggested names where they fit so items are counted together. Leave a cell blank if you don't know: it is saved as `unknown`, so missing data stays visible and can be filled in later. Write `n/a` if a cell doesn't apply, such as **Action** for an item still in use. Every table also has an optional **Notes** column, which can stay blank.
 3. Click **Create**.
-4. Comment `/save`. The bot checks every row, saves them, replies with a summary (including how many values are still `unknown`) and removes the `unsaved changes` label.
+4. Comment `/save`. The bot checks every row, saves them, replies with a summary and removes the `unsaved changes` label.
 
 **Keep your record open.** It's yours for as long as you're in the group; it is only closed when you leave (see below).
 
