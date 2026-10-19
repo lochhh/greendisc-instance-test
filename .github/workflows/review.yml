@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: lochhh/actions/greendisc_toolkit/review_cycle@a1000b6bb07df5c49e9daaa3b8cd8ad54535e3ce # greendisc-toolkit branch (untagged)
+      - uses: lochhh/actions/greendisc_toolkit/review_cycle@7e8c3d6481f67fc631c46fececa80adc1876e865 # greendisc-toolkit branch (untagged)
         with:
           due: ${{ inputs.due }}
           name: ${{ inputs.name }}

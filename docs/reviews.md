@@ -18,7 +18,7 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
 ## What it creates
 
 - **A milestone** for the cycle, due on the meeting date. Its progress bar shows how much of the review is done.
-- **A review issue** (label `review`) with a checklist of the criteria for the tiers in `config.yml` (`tiers`, `[Bronze]` by default). It links the criteria upstream and the previous cycle's review issue, so you can follow the reviews back.
+- **A review issue** (label `review`) for the representative, assigned to whoever starts the review, with a checklist of the criteria for the tiers in `config.yml` (`tiers`, `[Bronze]` by default). It links the criteria upstream and the previous cycle's review issue, so you can follow the reviews back.
 - **A check-in for each member** who has a personal record, assigned to them. Whoever starts the review gets the representative's version. A check-in has two items:
   - **your personal record:** check everything is up to date, then comment `/save`;
   - **the group record:** check everything is up to date. The representative also reviews members' changes and comments `/save`.
