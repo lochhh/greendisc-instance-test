@@ -1,2 +1,1 @@
 record,name,runs_on,runtime,resources,frequency,status,notes
-8,Sample sorter,hpc,3 h,4 GPUs,weekly,active,
