@@ -71,4 +71,4 @@ For whoever approves the repository. Each workflow asks only for these permissio
 |---|---|---|
 | Save Green DiSC records (`save-record.yml`) | `contents: write`, `issues: write` | Commit `data/*.csv`; label and comment on records, close duplicates |
 | Sync Green DiSC criteria (`sync-criteria.yml`) | `contents: write`, `pull-requests: write` | Push the `greendisc/sync-criteria` branch; open its pull request |
-| Start Green DiSC review (`review.yml`) | `contents: read`, `issues: write`; then the criteria sync's permissions | Read `config.yml` and `criteria.yml`; create the milestone and check-ins, close the previous cycle |
+| Start Green DiSC review (`review.yml`) | The criteria sync's permissions; then `contents: read`, `issues: write` | Read `config.yml` and `criteria.yml`; create the milestone and check-ins, close the previous cycle |

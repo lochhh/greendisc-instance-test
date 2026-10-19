@@ -28,11 +28,11 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
   - review members' changes to the group record and comment `/save` on it;
   - check the guides are up to date, and review members' pull requests;
   - check the README's *Your Green DiSC representative* section and *Where the evidence lives* table;
-  - merge the criteria sync pull request, if there is one;
+  - if Green DiSC's criteria changed, check the upstream changes and merge the criteria sync pull request (this item only appears when there is one);
   - go through the evidence for each criterion at the meeting.
 
   Saving a record ticks its line; the representative ticks the rest and closes the check-in after the meeting.
-- **A criteria sync**, which opens a pull request if Green DiSC's criteria changed since the last cycle. Check the linked upstream changes for anything that affects your evidence before merging it.
+- **A criteria sync**, run first, which opens a pull request if Green DiSC's criteria changed since the last cycle. Check the linked upstream changes for anything that affects your evidence before merging it. If the sync fails, the review still starts.
 
 It also **closes the previous cycle**: any of its check-ins still open are closed, then its milestone is closed. The run's summary (open the run under **Actions**) lists what was created and any records with unsaved changes.
 
