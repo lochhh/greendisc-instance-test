@@ -48,7 +48,7 @@ For the Research Group track, Bronze tier. Records are issues that the bot saves
 | `02-B` Unused equipment | Hardware rows with status `unused` | Personal records → `data/hardware.csv` |
 | `03-B` E-waste | Routes and policy | [guides/e-waste.md](guides/e-waste.md) |
 | `DS1-B` Data resources | Dataset rows | Personal records → `data/data-resources.csv` |
-| `DS2-B` Data cleaning | Cleanup rows; check-in reminders as the regular process | Personal records → `data/data-cleaning.csv` |
+| `DS2-B` Data cleaning | Cleanup rows | Personal records → `data/data-cleaning.csv` |
 | `HPC1-B` Compute infrastructure | Systems the group uses | Group record → `data/compute.csv` |
 | `HPC2-B` Pipelines | Pipeline rows | Personal records → `data/pipelines.csv` |
 | `HPC3-B` Best practices | Training sessions; tips and materials | Group record → `data/training.csv`; [guides/green-computing.md](guides/green-computing.md) |

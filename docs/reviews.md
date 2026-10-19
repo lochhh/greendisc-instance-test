@@ -20,7 +20,7 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
 - **A milestone** for the cycle, due on the meeting date. Its progress bar shows how much of the review is done.
 - **A review issue** (label `review`) with a checklist of the criteria for the tiers in `config.yml` (`tiers`, `[Bronze]` by default). It links the criteria upstream and the previous cycle's review issue, so you can follow the reviews back.
 - **A check-in for each member** who has a personal record, assigned to them. Whoever starts the review gets the representative's version. A check-in has two items:
-  - **your personal record:** go over it, clean up your data directories if it's been a while (these regular reminders are the cleaning process `DS2-B` asks for), and comment `/save` when it's complete and up to date;
+  - **your personal record:** check everything is up to date, then comment `/save`;
   - **the group record:** add anything new since the last review. In the representative's check-in, this item is instead: make sure members have added theirs, then review it and comment `/save`.
 
   Saving a record ticks its line, and the check-in closes by itself once its record lines are ticked. Saving an unchanged record counts: it shows the record was looked at. The group-record reminder isn't tracked, since most people won't have anything to add.
