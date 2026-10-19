@@ -12,13 +12,13 @@ permissions: {}
 
 jobs:
   record:
-    # Issues only (not pull requests); a first filter, the action checks each
-    # commenter's actual role before saving.
+    # Issues only (not pull requests). Edits only flag unsaved changes; for
+    # /save, this is a first filter and the action checks the commenter's role.
     if: >-
       !github.event.issue.pull_request &&
-      (github.event_name == 'issues' || startsWith(github.event.comment.body, '/save')) &&
-      contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'),
-        github.event_name == 'issues' && github.event.issue.author_association || github.event.comment.author_association)
+      (github.event_name == 'issues' ||
+        (startsWith(github.event.comment.body, '/save') &&
+          contains(fromJSON('["OWNER", "MEMBER", "COLLABORATOR"]'), github.event.comment.author_association)))
     runs-on: ubuntu-latest
     permissions:
       contents: write # commit the CSV files
@@ -26,4 +26,4 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: lochhh/actions/greendisc_toolkit/save_record@192db7d0050f276a9b3dcf7c4192ee5fdc8b0765 # greendisc-toolkit branch (untagged)
+      - uses: lochhh/actions/greendisc_toolkit/save_record@bf4afb2878825f7e01f1a65a27773e8ba0cd6de0 # greendisc-toolkit branch (untagged)

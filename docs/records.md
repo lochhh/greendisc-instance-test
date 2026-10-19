@@ -21,12 +21,13 @@ Each member keeps **one personal record issue** listing the equipment, data and 
 
 Leave a table empty if it doesn't apply. Reference material, such as e-waste routes and green computing tips, belongs in the [guides](../guides/README.md) rather than records, so it can be published and read by others.
 
-## Creating your record
+## Your record
 
-1. **Issues → New issue → My Green DiSC record.**
-2. Fill in the table: one row per item, copying a row to add more. The **How to update this record** section at the top explains the basics, and the comment above each table (visible when editing) says what each column expects. **Type** is free text; use the suggested names where they fit so items are counted together. Leave a cell blank if you don't know: it is saved as `unknown`, so missing data stays visible and can be filled in later. Write `n/a` if a cell doesn't apply, such as **Action** for an item still in use. Every table also has an optional **Notes** column, which can stay blank.
-3. Click **Create**.
-4. Comment `/save`. The bot checks every row, saves them, replies with a summary and removes the `unsaved changes` label.
+Each review creates a personal record for every member who doesn't have one yet (everyone with the **Write** or **Maintain** role, and the representative), titled `Green DiSC personal record: <username>` and assigned to them. Your review check-in links to it. To start before the next review, use **Issues → New issue → Green DiSC personal record**.
+
+1. Edit the issue and fill in the tables: one row per item. The **How to update this record** section at the top explains the basics, and the comment above each table (visible when editing) says what each column expects. **Type** is free text; use the suggested names where they fit so items are counted together. Leave a cell blank if you don't know: it is saved as `unknown`, so missing data stays visible and can be filled in later. Write `n/a` if a cell doesn't apply, such as **Action** for an item still in use. Every table also has an optional **Notes** column, which can stay blank.
+2. Click **Save** on the issue.
+3. Comment `/save`. The bot checks every row, saves them, replies with a summary and removes the `unsaved changes` label.
 
 **Keep your record open.** It's yours for as long as you're in the group; it is only closed when you leave (see below).
 
@@ -49,7 +50,7 @@ Before each review you'll get a **check-in** issue asking you to go over your re
 
 Find your record with the issue search `is:issue label:personal-record author:@me`.
 
-Each person has one record. Saving a second one gets a reply with a link to the first.
+Each person has one record: the one assigned to them, or that they created. Saving a second one gets a reply with a link to the first. A record that is closed, for someone who left or doesn't need one, is never recreated by a review.
 
 ## The group record
 

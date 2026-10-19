@@ -57,11 +57,11 @@ A repository owned by a personal account has no Maintain role: every collaborato
 
 ## 6. Create records
 
-The representative creates the group record once (**Issues → New issue → Green DiSC group record**), and asks each member to create their own (**My Green DiSC record**). Each record is saved by commenting `/save` on it. See [Recording evidence](records.md).
+The representative creates the group record once: **Issues → New issue → Green DiSC group record**, then comment `/save`. Members' personal records are created by the first review. See [Recording evidence](records.md).
 
 ## 7. Start your first review
 
-The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the review's milestone and a check-in for each member, including the representative's own. See [Running reviews](reviews.md).
+The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates a personal record for each member (everyone with the Write or Maintain role, and the representative), the review's milestone and a check-in for each member, including the representative's own. See [Running reviews](reviews.md).
 
 ## What the workflows can do
 
