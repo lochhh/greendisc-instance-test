@@ -23,12 +23,12 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
 - **A check-in for each member** with a personal record, assigned to them:
   - **your personal record:** check everything is up to date, then comment `/save`;
   - **the group record:** check everything is up to date;
-  - **the guides:** read them, and suggest anything new or outdated by editing the page on GitHub and choosing to start a pull request.
+  - **the guides:** read them, suggest anything new or outdated by editing the page on GitHub and choosing to start a pull request, and review other people's pull requests. Anyone with Write access can approve and merge them.
 
   Saving your record ticks its line and closes your check-in. Saving an unchanged record counts: it shows the record was looked at.
 - **The representative's check-in**, assigned to whoever starts the review. It covers their own record, and also asks them to:
   - review members' changes to the group record and comment `/save` on it;
-  - check the guides are up to date, and review members' pull requests;
+  - check the guides are up to date, and that no pull requests are left waiting;
   - check the README's *Your Green DiSC representative* section, and that its *Where the evidence lives* table still matches the criteria;
   - if Green DiSC's criteria changed, check the upstream changes and merge the criteria sync pull request (this item only appears when there is one);
   - if saved rows belong to records that no longer exist (for example, a deleted record), delete those rows by hand or move the items into the owner's record (this item only appears when there are any; see [the CSV files](records.md#the-csv-files)).
