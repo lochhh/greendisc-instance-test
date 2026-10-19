@@ -11,7 +11,7 @@ on:
         required: true
         type: string
       name:
-        description: Cycle name (leave blank for "Review <year>-<month>")
+        description: Cycle name, no spaces (leave blank for "Review-<year>-<month>")
         required: false
         type: string
 
@@ -26,7 +26,7 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: lochhh/actions/greendisc_toolkit/review_cycle@02a4030da7b878ac00810ff547825ff54b96ab4e # greendisc-toolkit branch (untagged)
+      - uses: lochhh/actions/greendisc_toolkit/review_cycle@1972743447c50113efcbb0be31143f58ae9622a7 # greendisc-toolkit branch (untagged)
         with:
           due: ${{ inputs.due }}
           name: ${{ inputs.name }}

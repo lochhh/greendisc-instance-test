@@ -29,7 +29,6 @@ If the policy allows all actions, there is nothing to do. The same setting exist
 
 Edit [`config.yml`](../config.yml):
 
-- **`representative`**: your Green DiSC representative's `name`, GitHub username (`github`) and `contact` (e.g. an email address). Members see these in their review check-ins and in the bot's replies, and they are evidence for `G1-B`. Reviews can't start until they're filled in. When the representative changes, update them here.
 - **`tiers`**: which tiers' criteria to review; leave it as `[Bronze]` to start with.
 - **`track`**:
 
@@ -42,6 +41,8 @@ Edit [`config.yml`](../config.yml):
 Committing a change to `config.yml` starts the criteria sync, which opens a pull request creating `criteria.yml`; merge it. If you're keeping the default `RG`, run **Actions → Sync Green DiSC criteria → Run workflow** once instead. See [Keeping criteria in sync](criteria-sync.md) for details on how the sync works.
 
 ## 5. Add people
+
+Name your Green DiSC representative, with contact details, in the README's *Your Green DiSC representative* section, so members know who to ask. The README also lists [who does what](../README.md#who-does-what).
 
 **Settings → Collaborators and teams** (or a team with access to the repository):
 
@@ -60,7 +61,7 @@ The representative creates the group record once (**Issues → New issue → Gre
 
 ## 7. Start your first review
 
-The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the review's milestone, one issue per criterion and a check-in for each member. See [Running reviews](reviews.md).
+The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the review's milestone, a review issue listing the criteria and a check-in for each member. See [Running reviews](reviews.md).
 
 ## What the workflows can do
 
@@ -70,4 +71,4 @@ For whoever approves the repository. Each workflow asks only for these permissio
 |---|---|---|
 | Save Green DiSC records (`save-record.yml`) | `contents: write`, `issues: write` | Commit `data/*.csv`; label and comment on records, close duplicates |
 | Sync Green DiSC criteria (`sync-criteria.yml`) | `contents: write`, `pull-requests: write` | Push the `greendisc/sync-criteria` branch; open its pull request |
-| Start Green DiSC review (`review.yml`) | `contents: read`, `issues: write`; then the criteria sync's permissions | Read `config.yml` and `criteria.yml`; create the milestone, criterion issues and check-ins, close the previous cycle |
+| Start Green DiSC review (`review.yml`) | `contents: read`, `issues: write`; then the criteria sync's permissions | Read `config.yml` and `criteria.yml`; create the milestone, review issue and check-ins, close the previous cycle |

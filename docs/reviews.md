@@ -8,26 +8,27 @@ The Green DiSC representative starts each cycle, usually at the end of the previ
 
 1. Agree the date of the next review meeting.
 2. Go to **Actions → Start Green DiSC review → Run workflow**.
-3. Enter the meeting date as `YYYY-MM-DD` (e.g. `2026-12-10`). The cycle is named `Review <year>-<month>` of that date; type a different name if you prefer.
+3. Enter the meeting date as `YYYY-MM-DD` (e.g. `2026-12-10`). The cycle is named `Review-<year>-<month>` of that date; type a different name if you prefer, without spaces (GitHub's milestone links break on them, so they're replaced with hyphens).
 4. Click **Run workflow**.
 
 From the command line: `gh workflow run review.yml -f due=2026-12-10`.
 
-Only people with the **Maintain** or **Admin** role can start a review; for anyone else the run stops with an error and creates nothing. `config.yml` must name the representative first (see [setup](setup.md#4-fill-in-configyml-and-sync-the-criteria)).
+Only people with the **Maintain** or **Admin** role can start a review; for anyone else the run stops with an error and creates nothing.
 
 ## What it creates
 
 - **A milestone** for the cycle, due on the meeting date. Its progress bar shows how much of the review is done.
-- **One issue per criterion** for the tiers in `config.yml` (`tiers`, `[Bronze]` by default), labelled e.g. `criterion:RG-01-B`. Each links the criterion upstream and the previous cycle's issue for the same criterion, so you can follow a criterion's history from one review to the next.
-- **A check-in for each member** who has a personal record, assigned to them, plus one for the representative. A check-in is a to-do list:
+- **A review issue** (label `review`) with a checklist of the criteria for the tiers in `config.yml` (`tiers`, `[Bronze]` by default). It links the criteria upstream and the previous cycle's review issue, so you can follow the reviews back.
+- **A check-in for each member** who has a personal record, assigned to them. Whoever starts the review gets the representative's version. A check-in is a to-do list:
+  - if it's been a while, clean up your data directories and log it in your record (these regular reminders are the cleaning process `DS2-B` asks for);
   - go over your own record and comment `/save` when it's complete and up to date;
   - add anything the group did since the last review to the group record;
-  - for the representative only: once members have added their rows, check the group record and comment `/save` on it.
+  - for the representative only: once members have added their rows, review the group record and comment `/save` on it.
 
   Saving a record ticks its line, and the check-in closes by itself once its record lines are ticked. Saving an unchanged record counts: it shows the record was looked at. The group-record reminder isn't tracked, since most people won't have anything to add.
 - **A criteria sync**, which opens a pull request if Green DiSC's criteria changed since the last cycle. Merge it before the meeting, and check the linked upstream changes for anything that affects your evidence.
 
-It also **closes the previous cycle**: any of its issues still open are closed with a link to their replacement, then its milestone is closed. The run's summary (open the run under **Actions**) lists what was created and any records with unsaved changes.
+It also **closes the previous cycle**: any of its issues still open are closed with a link to the new review issue or check-ins, then its milestone is closed. The run's summary (open the run under **Actions**) lists what was created and any records with unsaved changes.
 
 If a run fails part-way, run it again with the same date: it only adds what's missing.
 
@@ -39,6 +40,6 @@ If a run fails part-way, run it again with the same date: it only adds what's mi
 
 ## At the meeting
 
-Go through the criterion issues. For each one, check its evidence (the README's *Where the evidence lives* table says where), note anything to follow up in a comment, and close the issue when the evidence is ready. Then agree the next meeting date and start the next cycle.
+Go through the review issue's checklist. For each criterion, check its evidence (the README's *Where the evidence lives* table says where), note anything to follow up in a comment, and tick it off. Close the review issue when you're done, then agree the next meeting date and start the next cycle.
 
-Closed milestones, with their criterion issues and check-ins, are the record of past reviews.
+Closed milestones, with their review issues and check-ins, are the record of past reviews.

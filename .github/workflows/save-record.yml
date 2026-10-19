@@ -4,7 +4,7 @@ name: Save Green DiSC records
 # data/*.csv when someone comments /save.
 on:
   issues:
-    types: [opened, edited]
+    types: [edited]
   issue_comment:
     types: [created]
 
@@ -26,4 +26,4 @@ jobs:
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: lochhh/actions/greendisc_toolkit/save_record@66c198ee0ba226fc309fefa1ed4b95ac21367a20 # greendisc-toolkit branch (untagged)
+      - uses: lochhh/actions/greendisc_toolkit/save_record@1972743447c50113efcbb0be31143f58ae9622a7 # greendisc-toolkit branch (untagged)
