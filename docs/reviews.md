@@ -1,14 +1,14 @@
 # Running reviews
 
-Green DiSC asks for evidence that's kept up to date, not a one-off snapshot. The toolkit organises this as **review cycles**: the period leading up to a review meeting, usually every few months. Each cycle is a GitHub milestone whose due date is the meeting date.
+Green DiSC asks for evidence that's kept up to date, not a one-off snapshot. The toolkit organises this as **review cycles**: the period leading up to a review, usually every few months. Each cycle is a GitHub milestone whose due date is the review date.
 
 ## Starting a cycle
 
-The Green DiSC representative starts each cycle, usually at the end of the previous review meeting:
+The Green DiSC representative starts each cycle, usually right after finishing the previous one:
 
-1. Agree the date of the next review meeting.
+1. Decide when the review should be done by.
 2. Go to **Actions → Start Green DiSC review → Run workflow**.
-3. Enter the meeting date as `YYYY-MM-DD` (e.g. `2026-12-10`). The cycle is named `Review-<year>-<month>` of that date; type a different name if you prefer, without spaces (GitHub's milestone links break on them, so they're replaced with hyphens).
+3. Enter that date as `YYYY-MM-DD` (e.g. `2026-12-10`). The cycle is named `Review-<year>-<month>` of that date; type a different name if you prefer, without spaces (GitHub's milestone links break on them, so they're replaced with hyphens).
 4. Click **Run workflow**.
 
 Alternatively, with the [GitHub CLI](https://cli.github.com/): `gh workflow run review.yml -f due=2026-12-10` (add `-f name=...` for a different name).
@@ -17,7 +17,7 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
 
 ## What it creates
 
-- **A milestone** for the cycle, due on the meeting date. Its progress bar shows how many check-ins are done.
+- **A milestone** for the cycle, due on the review date. Its progress bar shows how many check-ins are done.
 - **The group record**, if there isn't one yet, assigned to whoever starts the review.
 - **A personal record for each member who doesn't have one yet**: everyone with the **Write** or **Maintain** role, and whoever starts the review. Admins, who in an organisation are often owners outside the group, don't get one unless they start the review. A closed record is never recreated, so close the record of anyone who doesn't need one, and reopen it if they rejoin or it was closed by mistake.
 - **A check-in for each member** with a personal record, assigned to them:
@@ -29,26 +29,23 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
 - **The representative's check-in**, assigned to whoever starts the review. It covers their own record, and also asks them to:
   - review members' changes to the group record and comment `/save` on it;
   - check the guides are up to date, and review members' pull requests;
-  - check the README's *Your Green DiSC representative* section and *Where the evidence lives* table;
+  - check the README's *Your Green DiSC representative* section, and that its *Where the evidence lives* table still matches the criteria;
   - if Green DiSC's criteria changed, check the upstream changes and merge the criteria sync pull request (this item only appears when there is one);
-  - go through the evidence for each criterion at the meeting;
   - if saved rows belong to records that no longer exist (for example, a deleted record), delete those rows by hand or move the items into the owner's record (this item only appears when there are any; see [the CSV files](records.md#the-csv-files)).
 
-  Saving a record ticks its line; the representative ticks the rest and closes the check-in after the meeting.
+  Saving a record ticks its line; the representative ticks the rest and closes the check-in when they're done.
 - **A criteria sync**, run first, which opens a pull request if Green DiSC's criteria changed since the last cycle. Check the linked upstream changes for anything that affects your evidence before merging it. If the sync fails, the review still starts.
 
 It also **closes the previous cycle**: any of its check-ins still open are closed, then its milestone is closed. The run's summary (open the run under **Actions**) lists what was created and any records with unsaved changes.
 
 If a run fails part-way, run it again with the same date: it only adds what's missing.
 
-## Before the meeting
+## Finishing a review
 
 - Open check-ins in the milestone show who hasn't gone over their record yet.
 - The issue search `is:issue label:"unsaved changes"` finds records edited but not saved.
 - Open pull requests show suggested changes to the guides.
 
-## At the meeting
-
-Go through the criteria one by one: the README's *Where the evidence lives* table says where each one's evidence is, and the representative's check-in links the criteria text. Note anything to follow up as a comment on the representative's check-in. Then the representative closes their check-in, agrees the next meeting date with the group and starts the next cycle.
+Once everything on their check-in is done, the representative closes it and starts the next cycle. Some groups like to go through the criteria together at a meeting, using the README's *Where the evidence lives* table; that's optional. Note anything to follow up as a comment on the representative's check-in.
 
 Closed milestones, with their check-ins, are the record of past reviews.
