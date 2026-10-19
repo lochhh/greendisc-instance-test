@@ -61,7 +61,7 @@ The representative creates the group record once (**Issues → New issue → Gre
 
 ## 7. Start your first review
 
-The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the review's milestone, a review issue listing the criteria and a check-in for each member. See [Running reviews](reviews.md).
+The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the review's milestone and a check-in for each member, including the representative's own. See [Running reviews](reviews.md).
 
 ## What the workflows can do
 
@@ -71,4 +71,4 @@ For whoever approves the repository. Each workflow asks only for these permissio
 |---|---|---|
 | Save Green DiSC records (`save-record.yml`) | `contents: write`, `issues: write` | Commit `data/*.csv`; label and comment on records, close duplicates |
 | Sync Green DiSC criteria (`sync-criteria.yml`) | `contents: write`, `pull-requests: write` | Push the `greendisc/sync-criteria` branch; open its pull request |
-| Start Green DiSC review (`review.yml`) | `contents: read`, `issues: write`; then the criteria sync's permissions | Read `config.yml` and `criteria.yml`; create the milestone, review issue and check-ins, close the previous cycle |
+| Start Green DiSC review (`review.yml`) | `contents: read`, `issues: write`; then the criteria sync's permissions | Read `config.yml` and `criteria.yml`; create the milestone and check-ins, close the previous cycle |

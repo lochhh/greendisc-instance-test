@@ -25,23 +25,23 @@ A GitHub template that helps research groups and teams gather, organise and revi
 
 - Keep your personal record up to date: what you use, plus any shared items you look after. Clean up your data directories regularly and log each cleanup. Comment `/save` when it's complete and up to date.
 - Add to the group record: computing systems the group uses, training, shared material and promotion.
-- Before each review, work through the check-in assigned to you.
+- Before each review, work through the check-in assigned to you, including reading the guides and suggesting changes as pull requests.
 
 **The Green DiSC representative** (Maintain role):
 
 - Sets up the repository, creates the group record and keeps the section above up to date.
 - Reviews what members add to the group record, and saves it.
 - Starts each review with the meeting date, and runs the meeting.
-- Keeps the [guides](guides/README.md) up to date, and updates the records of people who leave.
+- Keeps the [guides](guides/README.md) up to date, reviewing members' suggestions, and updates the records of people who leave.
 
 ## Where the evidence lives
 
-For the Research Group track, Bronze tier. Records are issues that the bot saves to `data/`; guides are pages to fill in and publish. Each review has a review issue listing the criteria to check.
+For the Research Group track, Bronze tier. Records are issues that the bot saves to `data/`; guides are pages to fill in and publish. Before each review, everyone gets a check-in to go over them.
 
 | Criterion | Evidence | Where |
 |---|---|---|
 | `G1-B` Representative | Name and contact details; link to their profile or role description | *Your Green DiSC representative*, above |
-| `G2-B` Induction | Induction material covering green computing | [guides/green-computing.md](guides/green-computing.md), linked on the review issue |
+| `G2-B` Induction | Induction material covering green computing | [guides/green-computing.md](guides/green-computing.md) |
 | `G3-B` Resources shared | Rows with kind `shared resource` | Group record → `data/sharing.csv` |
 | `G4-B` Dissemination | Rows with kind `promotion` | Group record → `data/sharing.csv` |
 | `01-B` Hardware | All hardware rows | Personal records → `data/hardware.csv` |

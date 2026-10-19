@@ -11,6 +11,6 @@ Starter pages for the reference material your group keeps for itself and others:
 
 1. Fill in each page: replace every **To fill in** note with your group's details, then delete the note. Search for `To fill in` to find what's left.
 2. Publish them where your group already keeps documentation, such as your organisation's website or docs site. The pages are plain Markdown (MyST-compatible, so they work in a Sphinx site).
-3. In each review, check the pages are still accurate, and link the published pages in a comment on the review issue as evidence. The page's history shows when it was last updated.
+3. In each review, members read the pages and suggest changes by editing them on GitHub and starting a pull request; the representative reviews these. The page's history shows when it was last updated.
 
 Keep these pages free of anything you wouldn't publish: no room numbers, asset tags or names of who has what. Those belong in records in a private repository.
