@@ -8,8 +8,7 @@ A GitHub template that helps research groups and teams gather, organise and revi
 
 1. Click **Use this template** to create your own repository (**private** if you will record locations or owners).
 2. Follow [Setting up your repository](docs/setup.md): allow the toolkit's actions, fill in `config.yml` (your track; this syncs the criteria), add people and name your representative below.
-3. Create the group record: **Issues → New issue → Green DiSC group record**, then comment `/save`.
-4. Start your first review: **Actions → Start Green DiSC review**, with the date of your review meeting. This creates each member's personal record and check-in. See [Running reviews](docs/reviews.md).
+3. Start your first review: **Actions → Start Green DiSC review**, with the date of your review meeting. This creates the group record, each member's personal record and everyone's check-in. See [Running reviews](docs/reviews.md).
 
 ## Your Green DiSC representative
 
@@ -29,7 +28,7 @@ A GitHub template that helps research groups and teams gather, organise and revi
 
 **The Green DiSC representative** (Maintain role):
 
-- Sets up the repository, creates the group record and keeps the section above up to date.
+- Sets up the repository and keeps the section above up to date.
 - Reviews what members add to the group record, and saves it.
 - Starts each review with the meeting date, and runs the meeting.
 - Keeps the [guides](guides/README.md) up to date, reviewing members' suggestions, and updates the records of people who leave.

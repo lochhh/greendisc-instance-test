@@ -54,7 +54,7 @@ Each person has one record: the one assigned to them, or that they created. Savi
 
 ## The group record
 
-Create it once: **Issues → New issue → Green DiSC group record**, then comment `/save`. After that, anyone in the group can add to it: edit the issue and add a row. The Green DiSC representative reviews members' changes and comments `/save`; until then the issue is labelled `unsaved changes`. Keep earlier rows; together they are the history Green DiSC asks for.
+The first review creates it, assigned to the representative. After that, anyone in the group can add to it: edit the issue and add a row. The Green DiSC representative reviews members' changes and comments `/save`; until then the issue is labelled `unsaved changes`. Keep earlier rows; together they are the history Green DiSC asks for.
 
 GitHub doesn't merge edits to an issue: if two people edit it at the same time, the last one to save wins. The issue's edit history (the *edited* link next to it) keeps the earlier version if a row goes missing.
 
@@ -65,6 +65,8 @@ Anyone with **Write** access can save their own personal record and edit the gro
 ## When someone leaves
 
 The representative updates their record (each item's status, with an **Action** saying what happened, e.g. `returned to IT`), comments `/save`, then closes the issue. Closed records stay in the data; `/save` still works on them if something needs correcting later.
+
+A closed record isn't recreated by later reviews. If one was closed by mistake, or its owner rejoins the group, **reopen it**: they keep their history, and the next review gives them a check-in again.
 
 ## The CSV files
 

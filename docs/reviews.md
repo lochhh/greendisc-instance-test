@@ -18,7 +18,8 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
 ## What it creates
 
 - **A milestone** for the cycle, due on the meeting date. Its progress bar shows how many check-ins are done.
-- **A personal record for each member who doesn't have one yet**: everyone with the **Write** or **Maintain** role, and whoever starts the review. Admins, who in an organisation are often owners outside the group, don't get one unless they start the review. A closed record is never recreated, so close the record of anyone who doesn't need one.
+- **The group record**, if there isn't one yet, assigned to whoever starts the review.
+- **A personal record for each member who doesn't have one yet**: everyone with the **Write** or **Maintain** role, and whoever starts the review. Admins, who in an organisation are often owners outside the group, don't get one unless they start the review. A closed record is never recreated, so close the record of anyone who doesn't need one, and reopen it if they rejoin or it was closed by mistake.
 - **A check-in for each member** with a personal record, assigned to them:
   - **your personal record:** check everything is up to date, then comment `/save`;
   - **the group record:** check everything is up to date;

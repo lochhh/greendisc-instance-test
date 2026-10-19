@@ -55,13 +55,9 @@ People with the **Read** role can see the records but can't save them. See [Who 
 
 A repository owned by a personal account has no Maintain role: every collaborator gets Write, and only the account owner can save the group record and other people's records. Use an organisation repository if the representative isn't the owner.
 
-## 6. Create records
+## 6. Start your first review
 
-The representative creates the group record once: **Issues → New issue → Green DiSC group record**, then comment `/save`. Members' personal records are created by the first review. See [Recording evidence](records.md).
-
-## 7. Start your first review
-
-The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates a personal record for each member (everyone with the Write or Maintain role, and the representative), the review's milestone and a check-in for each member, including the representative's own. See [Running reviews](reviews.md).
+The representative chooses the date of the first review meeting and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the group record, a personal record for each member (everyone with the Write or Maintain role, and the representative), the review's milestone and a check-in for each member, including the representative's own. See [Running reviews](reviews.md).
 
 ## What the workflows can do
 
