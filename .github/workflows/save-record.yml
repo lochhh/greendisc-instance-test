@@ -22,8 +22,8 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write # commit the CSV files
-      issues: write # label and comment on record issues, close duplicates
+      issues: write # label records, reply to /save, tick and close check-ins
     steps:
       - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
 
-      - uses: lochhh/actions/greendisc_toolkit/save_record@e665727824d839952a11892dff50818f6f2486d0 # greendisc-toolkit branch (untagged)
+      - uses: lochhh/actions/greendisc_toolkit/save_record@53d8a1a15420efe502f10d50c486e731f86fcb0b # greendisc-toolkit branch (untagged)
