@@ -15,11 +15,11 @@ body:
       value: |
         - Anyone in the group can add to this record: add a row per system, session or activity.
         - Keep earlier rows: together they are the history Green DiSC asks for.
-        - Leave a cell blank if you don't know; it's saved as `unknown` so it can be filled in later.
+        - Leave a cell blank if you don't know.
         - When you've added your rows, click **Save** on the issue. It's then marked `unsaved changes` for the Green DiSC representative to review.
-        - Keep the issue open, so it can be updated later.
+        - Do not close this issue: it's the group's ongoing record, updated before each review.
 
-        **For the Green DiSC representative:** review new rows, then comment `/save`. The bot checks every row and copies the tables into the group's data files (`data/*.csv`), which the Green DiSC evidence and summary are built from; editing the issue alone doesn't update them. If something needs fixing, the bot replies saying what, and nothing is saved until it's fixed.
+        **For the Green DiSC representative:** review new rows, then comment `/save`. The bot validates every row and copies the tables into the group's data files (`data/*.csv`), which the Green DiSC evidence and summary are built from.
   - type: textarea
     id: compute
     attributes:
