@@ -1,0 +1,3 @@
+record,system,site,provider,region,pue,electricity,hardware,reason,status,notes
+9,Sample institution cluster,off-site,Sample university,Sample city,~1.3,"grid, renewable tariff",CPU and GPU nodes,unknown,in use,
+9,Sample lab GPU server,on-site,our group,Sample building,unknown,grid,2 GPUs,interactive work,in use,
