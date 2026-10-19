@@ -21,7 +21,7 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
 - **A review issue** (label `review`) with a checklist of the criteria for the tiers in `config.yml` (`tiers`, `[Bronze]` by default). It links the criteria upstream and the previous cycle's review issue, so you can follow the reviews back.
 - **A check-in for each member** who has a personal record, assigned to them. Whoever starts the review gets the representative's version. A check-in has two items:
   - **your personal record:** check everything is up to date, then comment `/save`;
-  - **the group record:** check everything is up to date, adding anything new since the last review. The representative also reviews members' additions and comments `/save`.
+  - **the group record:** check everything is up to date, adding anything new since the last review. The representative also reviews members' changes and comments `/save`.
 
   Saving a record ticks its line, and the check-in closes by itself once its record lines are ticked. Saving an unchanged record counts: it shows the record was looked at. The group-record reminder isn't tracked, since most people won't have anything to add.
 - **A criteria sync**, which opens a pull request if Green DiSC's criteria changed since the last cycle. Merge it before the meeting, and check the linked upstream changes for anything that affects your evidence.

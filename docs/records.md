@@ -53,7 +53,7 @@ Each person has one record. Saving a second one gets a reply with a link to the 
 
 ## The group record
 
-Create it once: **Issues → New issue → Green DiSC group record**, then comment `/save`. After that, anyone in the group can add to it: edit the issue and add a row. The Green DiSC representative checks new rows and comments `/save`; until then the issue is labelled `unsaved changes`. Keep earlier rows; together they are the history Green DiSC asks for.
+Create it once: **Issues → New issue → Green DiSC group record**, then comment `/save`. After that, anyone in the group can add to it: edit the issue and add a row. The Green DiSC representative reviews members' changes and comments `/save`; until then the issue is labelled `unsaved changes`. Keep earlier rows; together they are the history Green DiSC asks for.
 
 GitHub doesn't merge edits to an issue: if two people edit it at the same time, the last one to save wins. The issue's edit history (the *edited* link next to it) keeps the earlier version if a row goes missing.
 

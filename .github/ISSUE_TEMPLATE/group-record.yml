@@ -19,7 +19,7 @@ body:
         - When you've added your rows, click **Save** on the issue. It's then marked `unsaved changes` for the Green DiSC representative to review.
         - Do not close this issue: it's the group's ongoing record, updated before each review.
 
-        **For the Green DiSC representative:** review new rows, then comment `/save`. The bot validates every row and copies the tables into the group's data files (`data/*.csv`), which the Green DiSC evidence and summary are built from.
+        **For the Green DiSC representative:** review members' changes, then comment `/save`. The bot validates every row and copies the tables into the group's data files (`data/*.csv`), which the Green DiSC evidence and summary are built from.
   - type: textarea
     id: compute
     attributes:
