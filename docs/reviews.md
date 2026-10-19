@@ -45,6 +45,6 @@ If a run fails part-way, run it again with the same date: it only adds what's mi
 - The issue search `is:issue label:"unsaved changes"` finds records edited but not saved.
 - Open pull requests show suggested changes to the guides.
 
-Once everything on their check-in is done, the representative closes it and starts the next cycle. Some groups like to go through the criteria together at a meeting; [Recording evidence](records.md) and the [guides](../guides/README.md) say which criteria each part covers. Note anything to follow up as a comment on the representative's check-in.
+Once everything on their check-in is done, the representative closes it and starts the next cycle. Some groups like to go through the criteria together at a meeting; [Recording evidence](records.md) and the [guides](../guides/README.md) say which criteria each part covers.
 
 Closed milestones, with their check-ins, are the record of past reviews.

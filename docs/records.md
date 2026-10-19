@@ -86,7 +86,7 @@ The bot saves records to CSV files in `data/`, one per table. A file is created 
 
 The bot is the only writer of these files: a `/save` replaces that record's rows with the issue's current tables, so **don't edit the files directly**. Change the issue and `/save` instead, or your edit will be overwritten.
 
-**The one exception:** rows from a record that no longer exists, such as a deleted personal record, are never replaced, because nothing will save that record again. Each review lists them in the representative's check-in. Usually they should be deleted, by editing the files on GitHub. If a record was deleted by mistake, the next review creates a new one for its owner to fill in, and the old rows stay in the git history to copy from; delete them once the owner has re-entered their items.
+**The one exception:** rows from a record that no longer exists, such as a deleted personal record, are never replaced, because nothing will save that record again. Each review lists them in the representative's check-in. Usually the representative deletes them by editing the CSV files directly. If a record was deleted by mistake, the next review creates a new one for its owner to fill in, and the old rows stay in the git history to copy from; delete them once the owner has re-entered their items.
 
 ## Privacy
 
