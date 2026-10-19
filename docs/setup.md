@@ -57,7 +57,7 @@ A repository owned by a personal account has no Maintain role: every collaborato
 
 ## 6. Start your first review
 
-The representative chooses when the first review should be done by and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the group record, a personal record for each member (everyone with the Write or Maintain role, and the representative), the review's milestone and a check-in for each member, including the representative's own. See [Running reviews](reviews.md).
+The representative chooses when the first review should be done by and runs **Actions → Start Green DiSC review → Run workflow**, entering that date. This creates the group record, a personal record for each member (everyone with the Write, Maintain or Admin role), the review's milestone and a check-in for each member, including the representative's own. See [Running reviews](reviews.md).
 
 ## What the workflows can do
 

@@ -31,7 +31,6 @@ A GitHub template that helps research groups and teams gather, organise and revi
 - Sets up the repository and keeps the *Your Green DiSC representative* section up to date.
 - Reviews what members add to the group record, and saves it.
 - Starts each review with its date, and works through the representative's check-in.
-- Keeps the [guides](guides/README.md) up to date, making sure suggested changes don't wait for a review.
 - Manages who's in the group: gives new members Write access (the next review creates their record), and when someone leaves, updates and closes their record, then removes their access.
 
 ## Where the evidence lives

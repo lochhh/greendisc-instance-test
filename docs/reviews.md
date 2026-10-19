@@ -17,24 +17,29 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
 
 ## What it creates
 
-- **A milestone** for the cycle, due on the review date. Its progress bar shows how many check-ins are done.
-- **The group record**, if there isn't one yet, assigned to whoever starts the review.
-- **A personal record for each member who doesn't have one yet**: everyone with the **Write** or **Maintain** role, and whoever starts the review. Admins, who in an organisation are often owners outside the group, don't get one unless they start the review. A closed record is never recreated, so close the record of anyone who doesn't need one, and reopen it if they rejoin or it was closed by mistake.
-- **A check-in for each member** with a personal record, assigned to them:
-  - **your personal record:** check everything is up to date, then comment `/save`;
-  - **the group record:** check everything is up to date;
-  - **the guides:** read them, suggest anything new or outdated by editing the page on GitHub and choosing to start a pull request, and review other people's pull requests. Anyone with Write access can approve and merge them.
+1. **A criteria sync.** If Green DiSC's criteria changed since the last cycle, it opens a pull request. Check the linked upstream changes for anything that affects your evidence before merging it. If the sync fails, the review still starts.
+2. **A milestone** for the cycle, due on the review date. Its progress bar shows how many check-ins are done.
+3. **A check-in issue for each member**, assigned to them. A check-in is a to-do list:
+   - **your personal record:** check everything is up to date, then comment `/save`;
+   - **the group record:** check everything is up to date;
+   - **the guides:** go over them, opening pull requests to make changes as needed, and review any open pull requests to update the guides. Anyone with Write access can approve and merge them.
 
-  Saving your record ticks its line and closes your check-in. Saving an unchanged record counts: it shows the record was looked at.
-- **The representative's check-in**, assigned to whoever starts the review. It covers their own record, and also asks them to:
-  - review members' changes to the group record and comment `/save` on it;
-  - check the guides are up to date, and that no pull requests are left waiting;
-  - check the README's *Your Green DiSC representative* section, and that its *Where the evidence lives* table still matches the criteria;
-  - if Green DiSC's criteria changed, check the upstream changes and merge the criteria sync pull request (this item only appears when there is one);
-  - if saved rows belong to records that no longer exist (for example, a deleted record), delete those rows by hand or move the items into the owner's record (this item only appears when there are any; see [the CSV files](records.md#the-csv-files)).
+   Saving your record ticks its line and closes your check-in. Saving an unchanged record counts: it shows the record was looked at.
 
-  Saving a record ticks its line; the representative ticks the rest and closes the check-in when they're done.
-- **A criteria sync**, run first, which opens a pull request if Green DiSC's criteria changed since the last cycle. Check the linked upstream changes for anything that affects your evidence before merging it. If the sync fails, the review still starts.
+   **Whoever starts the review gets the representative's check-in**, so the representative should start reviews themselves, or reassign that check-in to the representative if someone else starts one for them. It has the same items, and also:
+   - review members' changes to the group record and comment `/save` on it;
+   - check the README's *Your Green DiSC representative* section, and that its *Where the evidence lives* table still matches the criteria;
+   - if Green DiSC's criteria changed, check the upstream changes and merge the criteria sync pull request (only when there is one);
+   - if saved rows belong to records that no longer exist, such as a deleted personal record, delete those rows (only when there are any; see [the CSV files](records.md#the-csv-files)).
+
+   Saving a record ticks its line; the representative ticks the rest and closes the check-in when they're done.
+
+On the **first review**, it also creates the records, as issues:
+
+- **the group record**, assigned to whoever starts the review;
+- **a personal record for every member**: everyone with the **Write**, **Maintain** or **Admin** role, and whoever starts the review.
+
+Later reviews create records only for people who have never had one, such as new members. A closed record is never recreated: close the record of anyone who doesn't need one, and reopen it if they rejoin or it was closed by mistake.
 
 It also **closes the previous cycle**: any of its check-ins still open are closed, then its milestone is closed. The run's summary (open the run under **Actions**) lists what was created and any records with unsaved changes.
 

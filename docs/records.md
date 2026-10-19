@@ -23,7 +23,7 @@ Leave a table empty if it doesn't apply. Reference material, such as e-waste rou
 
 ## Your record
 
-Each review creates a personal record for every member who doesn't have one yet (everyone with the **Write** or **Maintain** role, and the representative), titled `Green DiSC personal record: <username>` and assigned to them. Your review check-in links to it. To start before the next review, use **Issues → New issue → Green DiSC personal record**.
+Each review creates a personal record for every member who doesn't have one yet (everyone with the **Write**, **Maintain** or **Admin** role, and the representative), titled `Green DiSC personal record: <username>` and assigned to them. Your review check-in links to it. To start before the next review, use **Issues → New issue → Green DiSC personal record**.
 
 1. Edit the issue and fill in the tables: one row per item. The **How to update this record** section at the top explains the basics, and the comment above each table (visible when editing) says what each column expects. **Type** is free text; use the suggested names where they fit so items are counted together. Leave a cell blank if you don't know: it is saved as `unknown`, so missing data stays visible and can be filled in later. Write `n/a` if a cell doesn't apply, such as **Action** for an item still in use. Every table also has an optional **Notes** column, which can stay blank.
 2. Click **Save** on the issue.
@@ -72,7 +72,7 @@ A closed record isn't recreated by later reviews. If one was closed by mistake, 
 
 The bot is the only writer of `data/*.csv`. Each row has a `record` column with its issue number, which is how a later `/save` finds the rows to replace, so **don't edit the CSV files directly**: change the issue and `/save` instead, or your edit will be overwritten the next time that record is saved.
 
-**The one exception:** rows saved from a record that no longer exists, such as a deleted issue, are never replaced, because nothing will save that record again. Each review lists them in the representative's check-in. If the record was deleted on purpose, the representative deletes those rows by hand: open the file in `data/` on GitHub, click the pencil icon, remove the lines starting with that record number, and commit. If not, they add the items to the owner's record, `/save` it, and then delete the old rows the same way.
+**The one exception:** rows saved from a record that no longer exists, such as a deleted personal record, are never replaced, because nothing will save that record again. Each review lists them in the representative's check-in, and the representative deletes them from the files in `data/` by hand. If the record was deleted by mistake, the next review creates a new one for its owner to fill in, and the old rows stay in the git history if they want to copy them.
 
 ## Privacy
 
