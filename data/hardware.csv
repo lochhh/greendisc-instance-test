@@ -3,3 +3,4 @@ record,type,model,supplier,purchased,warranty,status,action,location,asset_tag,n
 8,monitor,Sample monitor,unknown,2019,unknown,unused,donate,unknown,unknown,
 8,keyboard,Sample keyboard,unknown,2022,unknown,in use,n/a,unknown,unknown,
 8,phone,Sample phone,Google,2024,unknown,in use,n/a,unknown,unknown,
+42,laptop,Test laptop,unknown,2025,unknown,in use,n/a,unknown,unknown,
