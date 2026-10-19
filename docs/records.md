@@ -72,6 +72,8 @@ A closed record isn't recreated by later reviews. If one was closed by mistake, 
 
 The bot is the only writer of `data/*.csv`. Each row has a `record` column with its issue number, which is how a later `/save` finds the rows to replace, so **don't edit the CSV files directly**: change the issue and `/save` instead, or your edit will be overwritten the next time that record is saved.
 
+**The one exception:** rows saved from a record that no longer exists, such as a deleted issue, are never replaced, because nothing will save that record again. Each review lists them in the representative's check-in. If the record was deleted on purpose, the representative deletes those rows by hand: open the file in `data/` on GitHub, click the pencil icon, remove the lines starting with that record number, and commit. If not, they add the items to the owner's record, `/save` it, and then delete the old rows the same way.
+
 ## Privacy
 
 **Location** and **Asset tag** are optional, and owner names are implied by who created each record. Keep the repository private if you record them. The public summary only ever contains counts, never rows.

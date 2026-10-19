@@ -32,7 +32,7 @@ Only people with the **Maintain** or **Admin** role can start a review; for anyo
   - check the README's *Your Green DiSC representative* section and *Where the evidence lives* table;
   - if Green DiSC's criteria changed, check the upstream changes and merge the criteria sync pull request (this item only appears when there is one);
   - go through the evidence for each criterion at the meeting;
-  - if saved rows belong to records that no longer exist (for example, a deleted record), delete those rows or add the items back to the owner's record (this item only appears when there are any).
+  - if saved rows belong to records that no longer exist (for example, a deleted record), delete those rows by hand or move the items into the owner's record (this item only appears when there are any; see [the CSV files](records.md#the-csv-files)).
 
   Saving a record ticks its line; the representative ticks the rest and closes the check-in after the meeting.
 - **A criteria sync**, run first, which opens a pull request if Green DiSC's criteria changed since the last cycle. Check the linked upstream changes for anything that affects your evidence before merging it. If the sync fails, the review still starts.
