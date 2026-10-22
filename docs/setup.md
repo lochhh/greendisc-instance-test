@@ -8,12 +8,12 @@ Click **Use this template → Create a new repository**. Make it **private** if 
 
 ## 2. Allow the toolkit's actions
 
-The workflows use GitHub's own `actions/checkout` and `actions/setup-python`, and the toolkit's shared actions in `lochhh/actions`.
+The workflows use GitHub's own `actions/checkout` and `actions/setup-python`, and the toolkit's shared actions in `neuroinformatics-unit/actions`.
 
 If your organisation restricts which actions can run (**Organisation settings → Actions → General → Policies**), an organisation owner needs to:
 
 - tick **Allow actions created by GitHub**, and
-- add `lochhh/actions@*, lochhh/actions/*` to the allowed actions and reusable workflows (the toolkit's actions are in subfolders of that repository).
+- add `neuroinformatics-unit/actions@*, neuroinformatics-unit/actions/*` to the allowed actions and reusable workflows (the toolkit's actions are in subfolders of that repository).
 
 If the policy allows all actions, there is nothing to do. The same setting exists per repository under **Settings → Actions → General**, if your organisation lets repositories choose.
 
@@ -24,6 +24,9 @@ If the policy allows all actions, there is nothing to do. The same setting exist
 - **Actions permissions:** actions must be enabled (they are by default).
 - **Workflow permissions:** leave the default (read). Each workflow asks for the permissions it needs.
 - Tick **Allow GitHub Actions to create and approve pull requests**, so the criteria sync can open its pull request. If it is greyed out, your organisation has disabled it; ask an organisation owner.
+
+> [!IMPORTANT]
+> Don't protect the default branch with a rule that requires pull requests (**Settings → Rules** or **Settings → Branches**). Saving a record commits `data/*.csv` straight to it, so `/save` would fail.
 
 ## 4. Choose your track and sync the criteria
 
@@ -62,6 +65,6 @@ For whoever approves the repository. Each workflow asks only for these permissio
 
 | Workflow | Permissions | Why |
 |---|---|---|
-| Save Green DiSC records (`save-record.yml`) | `contents: write`, `issues: write` | Commit `data/*.csv`; label records, reply to `/save`, tick and close check-ins |
+| Save Green DiSC records (`save-record.yml`) | `contents: write`, `issues: write` | Commit `data/*.csv`, and remove a closed record's rows; label records, reply to `/save`, tick check-ins and reopen unfinished ones |
 | Sync Green DiSC criteria (`sync-criteria.yml`) | `contents: write`, `pull-requests: write` | Push the `greendisc/sync-criteria` branch; open its pull request |
 | Start Green DiSC review (`review.yml`) | The criteria sync's permissions; then `contents: read`, `issues: write` | Read the issue forms and `data/`; create records, the milestone and check-ins, close the previous cycle |
